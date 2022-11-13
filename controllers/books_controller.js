@@ -58,7 +58,7 @@ books.get('/', (req, res) => {
 
 // Show
 books.get('/:id', (req, res) => {
-    Book.findOne({id: req.params.id})
+    Book.findById(req.params.id)
     .then(foundbook => {
         res.json({
             book: foundbook
